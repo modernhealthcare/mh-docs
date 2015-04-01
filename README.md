@@ -6,4 +6,6 @@ All of Modern Healthcare's documentation one place.
 
 ## [Docs](http://modernhealthcare.github.io/mh-docs/dist)
 
+## [Javascript](http://modernhealthcare.github.io/mh-javascript/dist)
+
 ## [Patterns](http://modernhealthcare.github.io/mh-patterns/dist)
