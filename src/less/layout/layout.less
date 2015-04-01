@@ -1,0 +1,47 @@
+// ============================================
+// Global
+// ============================================
+
+* { .box-sizing( border-box ); }
+
+html {
+  height: 100%;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  color: @true-black;
+  font-family: @primary-font;
+  font-size: 1em;
+  line-height: 1;
+  background: @white;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 85%;
+  max-width: 1280px;
+  overflow: hidden;
+  margin: 0 auto;
+  @media @sm { width: 90%; }
+  @media @md { width: 92.5%; }
+  @media @lg { width: 95%; }
+  @media @xl { width: 97.5%; }
+}
+
+.inner-padding {
+  padding: 2em;
+  @media @md {
+    padding: 4em 2em;
+  }
+}

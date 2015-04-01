@@ -1,0 +1,110 @@
+table,
+.pure-table {
+    /* Remove spacing between table cells (from Normalize.css) */
+    border-collapse: collapse;
+    border-spacing: 0;
+    empty-cells: show;
+    border: 1px solid @table-border-color;
+    border-radius: 4px;
+}
+
+table caption,
+.pure-table caption {
+    color: @table-color;
+    font: italic 85%/1 arial, sans-serif;
+    padding: 1em 0;
+    text-align: center;
+}
+
+table td,
+table th,
+.pure-table td,
+.pure-table th {
+    border-left: 1px solid @table-border-color;/*  inner column border */
+    border-width: 0 0 0 1px;
+    font-size: inherit;
+    margin: 0;
+    overflow: visible; /*to make ths where the title is really long work*/
+    padding: 0.5em 1em; /* cell padding */
+}
+table td:first-child,
+table th:first-child,
+.pure-table td:first-child,
+.pure-table th:first-child {
+    border-left-width: 0;
+}
+
+table thead,
+.pure-table thead {
+    background: @table-head-bg;
+    color: @table-color;
+    text-align: left;
+    vertical-align: bottom;
+}
+
+/*
+striping:
+   even - #fff (white)
+   odd  - @table-cell-bg-odd (light gray)
+*/
+table td,
+.pure-table td {
+    background-color: @table-cell-bg;
+}
+table td:nth-child(odd),
+.pure-table-odd td {
+    background-color: @table-cell-bg-odd;
+}
+
+
+/* HORIZONTAL BORDERED TABLES */
+
+table td,
+table th,
+.pure-table-horizontal td,
+.pure-table-horizontal th {
+    border-width: 0 0 1px 0;
+    border-bottom: 1px solid @table-border-color;
+}
+table tbody > tr:last-child > td,
+.pure-table-horizontal tbody > tr:last-child > td {
+    border-bottom-width: 0;
+}
+
+/* Foundation v2.1.4 http://foundation.zurb.com */
+/* Artfully masterminded by ZURB  */
+
+/* --------------------------------------------------
+   Table of Contents
+-----------------------------------------------------
+:: Page Name 1
+:: Page Name 2
+*/
+
+table,
+table.responsive {
+    width: 100%;
+}
+
+/* Mobile */
+@media @mobile {
+
+    table,
+    table.responsive,
+    table.google-visualization-table-table { margin-bottom: 0; }
+
+    .pinned { position: absolute; left: 0; top: 0; background: #fff; width: 35%; overflow: hidden; overflow-x: scroll; border-right: 1px solid #ccc; border-left: 1px solid #ccc; }
+    .pinned table { border-right: none; border-left: none; width: 100%; }
+    .pinned table th, .pinned table td { white-space: nowrap; }
+    .pinned td:last-child { border-bottom: 0; }
+
+    div.table-wrapper { position: relative; margin-bottom: 20px; overflow: hidden; border-right: 1px solid #ccc; }
+    div.table-wrapper div.scrollable { margin-left: 35%; }
+    div.table-wrapper div.scrollable { overflow: scroll; overflow-y: hidden; }
+
+    table.responsive td, table.responsive th { position: relative; white-space: nowrap; overflow: hidden; }
+    table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }
+
+
+}
+

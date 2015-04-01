@@ -1,0 +1,226 @@
+.ie8 img,
+.ie7 img,
+.ie6 img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+  /* vertical-align: bottom; */
+  /* Suppress the space beneath the baseline */
+  /* Responsive images */
+  /* @todo Add responsive embedded video. */
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+.ie8 .ad-container div,
+.ie7 .ad-container div,
+.ie6 .ad-container div,
+.ie8 .ad-container img,
+.ie7 .ad-container img,
+.ie6 .ad-container img {
+  text-align: center;
+  margin: 0 auto;
+}
+.ie8 .logo a,
+.ie7 .logo a,
+.ie6 .logo a {
+  display: block;
+  width: 250px;
+  height: 94px;
+  background: url('../images/mh-logo-dropshadow-ie.png') no-repeat 0 0;
+}
+.ie8 .sticky-logo,
+.ie7 .sticky-logo,
+.ie6 .sticky-logo {
+  width: 64px;
+  height: 26px;
+  background-image: url('../images/mh-logo-dropshadow-sticky-ie.png');
+}
+.ie8 .footer-logo a,
+.ie7 .footer-logo a,
+.ie6 .footer-logo a {
+  background-image: url('../images/mh-logo-footer-ie.png');
+}
+.ie8 .top-story img,
+.ie7 .top-story img,
+.ie6 .top-story img,
+.ie8 .news-item img,
+.ie7 .news-item img,
+.ie6 .news-item img {
+  width: 200px;
+}
+.ie8 .footer-social li a span {
+  width: 24px;
+  height: 24px;
+  background-position: 0 0 !important;
+}
+.ie8 .footer-social li.flickr a span {
+  background-image: url('/images/social/PNG/24x24/flickr.png');
+}
+.ie8 .footer-social li.rss a span {
+  background-image: url('/images/social/PNG/24x24/rss.png');
+}
+.ie8 .footer-social li.vimeo a span {
+  background-image: url('/images/social/PNG/24x24/vimeo.png');
+}
+.ie8 .footer-social li.twitter a span {
+  background-image: url('/images/social/PNG/24x24/twitter.png');
+}
+.ie8 .footer-social li.facebook a span {
+  background-image: url('/images/social/PNG/24x24/facebook.png');
+}
+.ie8 .footer-social li.googleplus a span {
+  background-image: url('/images/social/PNG/24x24/googleplus.png');
+}
+.ie8 .footer-social li.pinterest a span {
+  background-image: url('/images/social/PNG/24x24/pinterest.png');
+}
+.ie8 .footer-social li.linkedin a span {
+  background-image: url('/images/social/PNG/24x24/linkedin.png');
+}
+.ie8 .footer-social li.mail a span {
+  background-image: url('/images/social/PNG/24x24/mail.png');
+}
+.ie8 .footer-social li.toggle a span {
+  background-image: url('/images/social/PNG/24x24/arrow-up.png');
+}
+.ie8 .footer-social li.toggle.active a span {
+  background-image: url('/images/social/PNG/24x24/arrow-down.png');
+}
+.ie8 .footer-social li.github a span {
+  background-image: url('/images/social/PNG/24x24/github.png');
+}
+.ie8 .footer-social li.tumblr a span {
+  background-image: url('/images/social/PNG/24x24/tumblr.png');
+}
+.ie8 .footer-social li.dribbble a span {
+  background-image: url('/images/social/PNG/24x24/dribbble.png');
+}
+.ie8 .footer-social li.instagram a span {
+  background-image: url('/images/social/PNG/24x24/instagram.png');
+}
+.ie8 .footer-social li.paypal a span {
+  background-image: url('/images/social/PNG/24x24/paypal.png');
+}
+.ie8 .footer-social li.stumbleupon a span {
+  background-image: url('/images/social/PNG/24x24/stumbleupon.png');
+}
+.ie8 .footer-social li.dropbox a span {
+  background-image: url('/images/social/PNG/24x24/dropbox.png');
+}
+.ie8 .footer-social li.slideshare a span {
+  background-image: url('/images/social/PNG/24x24/slideshare.png');
+}
+.ie7 .footer-social {
+  height: 48px;
+  background: none;
+  line-height: 1;
+  border: 0;
+  padding: 0;
+}
+.ie7 .footer-social li {
+  display: inline !important;
+  width: 48px;
+  height: 48px;
+}
+.ie7 .footer-social li a span {
+  width: 24px;
+  height: 24px;
+  background-position: 0 0 !important;
+}
+.ie7 .footer-social li.flickr a span {
+  background-image: url('/images/social/PNG/24x24/flickr.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/flickr.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.rss a span {
+  background-image: url('/images/social/PNG/24x24/rss.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/rss.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.vimeo a span {
+  background-image: url('/images/social/PNG/24x24/vimeo.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/vimeo.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.twitter a span {
+  background-image: url('/images/social/PNG/24x24/twitter.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/twitter.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.facebook a span {
+  background-image: url('/images/social/PNG/24x24/facebook.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/facebook.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.googleplus a span {
+  background-image: url('/images/social/PNG/24x24/googleplus.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/googleplus.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.pinterest a span {
+  background-image: url('/images/social/PNG/24x24/pinterest.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/pinterest.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.linkedin a span {
+  background-image: url('/images/social/PNG/24x24/linkedin.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/linkedin.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.mail a span {
+  background-image: url('/images/social/PNG/24x24/mail.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/facebook.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.toggle a span {
+  background-image: url('/images/social/PNG/24x24/arrow-up.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/arrow-up.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.toggle.active a span {
+  background-image: url('/images/social/PNG/24x24/arrow-down.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/arrow-down.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.github a span {
+  background-image: url('/images/social/PNG/24x24/github.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/github.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.tumblr a span {
+  background-image: url('/images/social/PNG/24x24/tumblr.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/tumblr.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.dribbble a span {
+  background-image: url('/images/social/PNG/24x24/dribbble.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/dribbble.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.instagram a span {
+  background-image: url('/images/social/PNG/24x24/instagram.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/instagram.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.paypal a span {
+  background-image: url('/images/social/PNG/24x24/paypal.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/paypal.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.stumbleupon a span {
+  background-image: url('/images/social/PNG/24x24/stumbleupon.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/stumbleupon.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.dropbox a span {
+  background-image: url('/images/social/PNG/24x24/dropbox.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/dropbox.png', sizingMethod='crop');
+}
+.ie7 .footer-social li.slideshare a span {
+  background: transparent url('/images/social/PNG/24x24/slideshare.png');
+  _background: none;
+  _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/social/PNG/24x24/slideshare.png', sizingMethod='crop');
+}

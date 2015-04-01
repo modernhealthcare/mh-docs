@@ -1,0 +1,46 @@
+a {
+  color: @crimson;
+  //font-weight: 500;
+  text-decoration: none;
+  .transition( 0.2s; color; ease-in-out );
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken(@crimson, 10%);
+  }
+}
+
+.to-top {
+  position: fixed;
+  right: 1em;
+  bottom: 1em;
+  display: inline-block;
+  width: 3em;
+  height: 3em;
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  background: @crimson;
+  box-shadow: 0 0 10px rgba(0,0,0, .45);
+  border-radius: 4px;
+  padding: .5em;
+  z-index: 999;
+  .transition( 0.2s; all; ease-in-out );
+  span {
+    color: @white;
+    font-size: 2em;
+  }
+}
+
+.to-top.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.to-top.fade-out {
+  opacity: .65;
+  &:focus,
+  &:hover {
+    opacity: 1;
+  }
+}
