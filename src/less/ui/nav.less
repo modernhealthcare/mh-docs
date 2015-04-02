@@ -1,0 +1,37 @@
+//------------------------------------//
+//  @NAV
+//------------------------------------//
+
+.nav-sidebar {
+  position: relative;
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+  > li {
+    padding: 0;
+    margin: 0;
+    > a {
+      display: block;
+      width: 100%;
+      color: lighten(@cool-grey, 25%);
+      font-weight: bold;
+      > span {
+        display: inline-block;
+        width: 100%;
+        background-color: lighten(@cool-grey, 65%);
+        border-right: 1px solid rgba(0,0,0, .15);
+        border-bottom: 1px solid lighten(@cool-grey, 60%);
+        padding: 1em;
+        .transition( 0.2s; background-color; ease-in-out );
+      }
+      &:focus,
+      &:hover {
+        > span {
+          background-color: lighten(@cool-grey, 55%);
+        }
+      }
+    }
+  }
+}

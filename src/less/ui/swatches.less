@@ -1,0 +1,38 @@
+//------------------------------------//
+//  @SWATCHES
+//------------------------------------//
+
+.swatches {
+  > li {
+    .padding(0, 4, 0, 4);
+    .margin(4, 0, 4, 0);
+    box-sizing: border-box;
+    @media @md {
+      float: left;
+      width: 50%;
+    }
+    > .swatch {
+      text-align: center;
+      .rem(border-radius, 4);
+      .padding(48, 0, 48, 0);
+      &.dark {
+        color: @white;
+      }
+      &.light {
+        color: @black;
+      }
+      strong {
+        .rem(padding-right, 8);
+      }
+    }
+    > .logo {
+      text-align: center;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% auto;
+      box-shadow: 0 0 6px @shadow;
+      .rem(border-radius, 4);
+      .padding(128, 0, 128, 0);
+    }
+  }
+}

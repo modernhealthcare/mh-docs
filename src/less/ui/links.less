@@ -1,0 +1,49 @@
+//------------------------------------//
+//  @LINKS
+//------------------------------------//
+
+a {
+  color: @crimson;
+  text-decoration: none;
+  .transition(0.2s; color; ease-in-out);
+  &:hover,
+  &:focus,
+  &:active {
+    color: darken(@crimson, 10%);
+  }
+}
+
+.to-top {
+  position: fixed;
+  .rem(right, 16);
+  .rem(bottom, 16);
+  display: inline-block;
+  .rem(width, 48);
+  .rem(height, 48);
+  overflow: hidden;
+  visibility: hidden;
+  opacity: 0;
+  background: @crimson;
+  box-shadow: 0 0 10px rgba(0,0,0, .45);
+  .rem(border-radius, 4);
+  .padding(8, 8, 8, 8);
+  z-index: 999;
+  .transition(0.2s; all; ease-in-out);
+  span {
+    color: @white;
+    .rem(font-size, 32);
+  }
+}
+
+.to-top.is-visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.to-top.fade-out {
+  opacity: .65;
+  &:focus,
+  &:hover {
+    opacity: 1;
+  }
+}

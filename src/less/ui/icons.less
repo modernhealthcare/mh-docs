@@ -1,0 +1,39 @@
+//------------------------------------//
+//  @ICONS
+//------------------------------------//
+
+.icons {
+  > li {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    border: 1px solid darken(@white, 10%);
+    border-radius: 6px;
+    padding: 0;
+    .margin(0, 24, 36, 0);
+    box-sizing: border-box;
+    @media @sm {
+      width: auto;
+      .rem(min-width, 180);
+    }
+    > p {
+      width: 100%;
+      text-align: center;
+      line-height: 1;
+      white-space: nowrap;
+      background-color: #f5f2f0;
+      border: 1px solid darken(@white, 10%);
+      .rem(padding, 6);
+      margin: 0 auto;
+      &:last-child {
+        border-bottom: 0 none;
+      }
+    }
+    > span {
+      color: @warm-grey;
+      .rem(height, 96);
+      .rem(font-size, 32);
+      .rem(line-height, 96);
+    }
+  }
+}

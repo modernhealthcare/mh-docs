@@ -1,6 +1,17 @@
+//------------------------------------//
+//  @VARIABLES
+//------------------------------------//
+
 // Colors
-// Modern Healthcare palette
-@crimson: #982329; 
+@white: #fff;
+@black: #000;
+@cool-grey: #424b55;
+@warm-grey: #585555;
+
+@sponsored: #1a3c6b;
+@sponsored-tint: #e8f0f9;
+
+@crimson: #982329;
 @slate: #3d505a;
 @slate-tint: #90a1ab;
 @sky: #508ebc;
@@ -11,30 +22,22 @@
 @spice: #df6d27;
 @teal: #00757b;
 @sage: #b3c4b2;
-@mh: #0a365e;
-@dark-gray: #585555;
-@white: #fff;
-@black: #000;
-@true-black: #000;
-// Interface Guru's hex
-@masthead: #424b55;
-// sponsored content
-@sponsored-link: #1a3c6b;
-@sponsored-bg: #e8f0f9;
 
+@shadow: rgba(0,0,0, .35);
 
 
 // Fonts
-@primary-font: 'news-gothic-std', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+@fontSizeStandard: 16;
+@primary-font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 @secondary-font: Cambria, 'Hoefler Text', Utopia, 'Liberation Serif', 'Nimbus Roman No9 L Regular', Times, 'Times New Roman', serif;
-@tertiary-font: Arial, sans-serif;
 
-// ============================================
-// Pure CSS variables
-// ============================================
+
+//------------------------------------//
+//  @PURE CSS VARIABLES
+//------------------------------------//
 
 // Colors
-@gray-hex: #444;
+@gray-hex: #585555;
 @gray: rgba( 0, 0, 0, 0.80 );
 @gray-light: #999;
 
@@ -67,22 +70,22 @@
   @form-help-color: #666;
 
 // Menu
-@menu-text-color: #777; // form readonly too
-@menu-bg-color: #fff;
-@menu-hover-color: #fff;
-@menu-hover-bg: #eee; // form readonly too
-@menu-open-bg: #dedede;
-@menu-link-hover-color: #eee;
+@menu-text-color: @warm-grey; // form readonly too
+@menu-bg-color: @white;
+@menu-hover-color: @white;
+@menu-hover-bg: @warm-grey; // form readonly too
+@menu-open-bg: darken(@white, 10%);
+@menu-link-hover-color: @white;
 @menu-link-disabled: #bfbfbf;
 @menu-border-color: #b7b7b7;
 @menu-link-border-color: transparent;
-@menu-selected-color: #000;
+@menu-selected-color: @black;
   // Headings
-  @menu-heading-color: #565d64;
-  @menu-heading-border-color: #dfdfdf;
+  @menu-heading-color: @warm-grey;
+  @menu-heading-border-color: @cool-grey;
   // Paginator
   @menu-page-nav-color: #c0c1c3;
-  @menu-page-nav-shadow: rgba(0,0,0,0.45);
+  @menu-page-nav-shadow: @shadow;
 
 // Tables
 @table-color: #000;

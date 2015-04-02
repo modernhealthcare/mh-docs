@@ -11,119 +11,119 @@
 
 // modal
 .meter {
-	//display: none;
-	max-width: 568px;
-	background: darken(@white, 10%);
-	border: 1px solid lighten(@black, 35%);
-	border-top-right-radius: 4px;
-	box-shadow: 2px 2px 4px rgba(0,0,0,.35);
+  //display: none;
+  max-width: 568px;
+  background: darken(@white, 10%);
+  border: 1px solid lighten(@black, 35%);
+  border-top-right-radius: 4px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,.35);
 }
 .meter-logo {
-	background: @masthead;
-	padding: 1em;
-	margin: 0;
-	@media @md { padding: 2em; }
-	img {
-		width: 100%;
-		height: auto;
-		.vertical-align;
-	}
+  background: @cool-grey;
+  padding: 1em;
+  margin: 0;
+  @media @md { padding: 2em; }
+  img {
+    width: 100%;
+    height: auto;
+    .vertical-align;
+  }
 }
 .meter-body {
-	padding: 1em;
-	@media @md { padding: 2em }
-	h1 { margin: 0; }
-	p { margin: 0; }
+  padding: 1em;
+  @media @md { padding: 2em }
+  h1 { margin: 0; }
+  p { margin: 0; }
 }
 .modal-close {
-	position: absolute;
-	top: 0;
-	right: 0;
-	display: block;
-	font-size: 2em;
-	line-height: 0;
-	span { color: @black; }
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  font-size: 2em;
+  line-height: 0;
+  span { color: @black; }
 }
 
 // article
-.art-body.metered::after {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	display: block;
-	width: 100%;
-	height: 200px;
-	.gradient(rgba(255,255,255,0), rgba(255,255,255,1));
-	content: '';
+.art-body.metered:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 200px;
+  .gradient(rgba(255,255,255,0), rgba(255,255,255,1));
+  content: '';
 }
 .art-metered {
-	position: relative;
-	width:  100%;
-	background: darken(@white, 10%);
-	//border: 1px solid lighten(@black, 35%);
-	border-radius: 4px;
-	//box-shadow: 2px 2px 4px rgba(0,0,0,.35);
-	padding: 1em 0;
-	margin-bottom: 2em;
-	@media @md { margin-left: 1em; }
-	h2 { margin-top: 0; }
+  position: relative;
+  width:  100%;
+  background: darken(@white, 10%);
+  //border: 1px solid lighten(@black, 35%);
+  border-radius: 4px;
+  //box-shadow: 2px 2px 4px rgba(0,0,0,.35);
+  padding: 1em 0;
+  margin-bottom: 2em;
+  @media @md { margin-left: 1em; }
+  h2 { margin-top: 0; }
 }
 .art-metered-inner {
-	//position: relative;
-	padding: 2em;
+  //position: relative;
+  padding: 2em;
 }
 .art-metered-inner.login {
-	@media @lg { border-right: 1px solid lighten(@black, 60%); }
+  @media @lg { border-right: 1px solid lighten(@black, 60%); }
 }
 .art-metered-header {
-	display: none;
-	text-align: center;
-	@media @lg { display: block; }
-	h2 { margin-bottom: 0; }
+  display: none;
+  text-align: center;
+  @media @lg { display: block; }
+  h2 { margin-bottom: 0; }
 }
 .art-metered-inner-header {
-	@media @lg { display: none; }
+  @media @lg { display: none; }
 }
 .art-metered-login {
-	text-align: right;
-	padding-top: 1.15em;
+  text-align: right;
+  padding-top: 1.15em;
 }
 .art-metered-reset {
-	clear: both;
-	float: right;
-	padding-top: 1em;
+  clear: both;
+  float: right;
+  padding-top: 1em;
 }
 .art-metered-or {
-	position: relative;
-	display: block;
-	width: 32px;
-	height: 32px;
-	color: @white;
-	text-transform: uppercase;
-	line-height: 1.35;
-	background: @black;
-	border-radius: 50%;
-	padding: 1em;
-	margin: 0 auto;
-	&::before,
-	&::after {
-		position: absolute;
-		top: 50%;
-		display: block;
-		width: 100%;
-		height: 1px;
-		background: lighten(@black, 60%);
-		content: '';
-		@media @lg { display: none; }
-	}
-	&::before { left: -100%; }
-	&::after { right: -100%; }
+  position: relative;
+  display: block;
+  width: 32px;
+  height: 32px;
+  color: @white;
+  text-transform: uppercase;
+  line-height: 1.35;
+  background: @black;
+  border-radius: 50%;
+  padding: 1em;
+  margin: 0 auto;
+  &:before,
+  &:after {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: lighten(@black, 60%);
+    content: '';
+    @media @lg { display: none; }
+  }
+  &:before { left: -100%; }
+  &:after { right: -100%; }
 }
 .art-metered-or-inner { padding: 1em 0; }
 .mobile {
-	@media @lg { display: none; }
+  @media @lg { display: none; }
 }
 .art-metered-register {
-	text-align: left;
-	padding-top: 1.15em;
+  text-align: left;
+  padding-top: 1.15em;
 }

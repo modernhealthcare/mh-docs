@@ -1,0 +1,101 @@
+//------------------------------------//
+//  @TYPOGRAPHY
+//------------------------------------//
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: @secondary-font;
+  font-weight: 700;
+  text-rendering: optimizeLegibility;
+  //letter-spacing: -.075em;
+  &.small {
+    color: lighten(@black, 10%);
+    font-size: 83%;
+  }
+  > span {
+    color: lighten(@cool-grey, 45%);
+    font-size: .85em;
+    padding-right: .25em;
+    .transition( 0.2s; color; ease-in-out );
+  }
+  &:focus > span,
+  &:hover > span {
+    color: @cool-grey;
+  }
+}
+
+.title-xxl {
+  color: @cool-grey;
+  font-size: 2.5em;
+}
+
+h1[id],
+h2[id],
+h3[id],
+h4[id],
+h5[id],
+h6[id] {
+  background-color: #fafafa;
+  padding: .5em;
+}
+
+b,
+strong { font-weight: 700; }
+
+i,
+em { font-style: italic; }
+
+span {
+
+}
+
+p {
+  line-height: 1.45;
+  padding: .5em 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin-top: .85em;
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+  > li { padding-bottom: .5em; }
+}
+
+.dot-list {
+  text-indent: -1em;
+  padding-left: 1em;
+  margin-left: 0;
+  > li:before {
+    content: '\2022 \020';
+  }
+}
+
+ol {
+  list-style: decimal;
+  padding: 0 0 0 40px;
+  > li {
+    padding-bottom: 1em;
+  }
+}
+
+.pullquote {
+  font-family: @secondary-font;
+  font-size: 24px;
+  line-height: 30px;
+  padding: 0 0 .5em;
+  margin: 0;
+}
+
+p > code {
+  white-space: normal !important;
+}
+

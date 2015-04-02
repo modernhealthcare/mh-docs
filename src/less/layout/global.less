@@ -1,0 +1,74 @@
+//------------------------------------//
+//  @GLOBAL
+//------------------------------------//
+
+*,
+*:before,
+*:after {
+  .box-sizing( border-box );
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  position: relative;
+  color: @black;
+  font-family: @primary-font;
+  .rem(font-size, 16);
+  line-height: 1;
+  background: @white;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 85%;
+  .rem(max-width, 1280);
+  overflow: hidden;
+  margin: 0 auto;
+  @media @sm { width: 90%; }
+  @media @md { width: 92.5%; }
+  @media @lg { width: 95%; }
+  @media @xl { width: 97.5%; }
+}
+
+.u-pad {
+  .rem(padding, 32);
+  @media @md {
+    .padding(64, 32, 64, 32);
+  }
+}
+
+.-u-lft {
+  @media @md {
+    padding-right: 1em;
+    p {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+}
+
+.-u-rgt {
+  @media @md {
+    padding-left: 1em;
+    p {
+      padding-top: 0;
+      margin-top: 0;
+    }
+  }
+}

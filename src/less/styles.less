@@ -3,54 +3,33 @@ Modern Healthcare
 Copyright 2014 Crain Communications Inc. All rights reserved.
 */
 
-// Pure CSS LESS port source here:  https://github.com/pxdunn/pure-less
-// modified for style architecture
+// Ported from http://purecss.io
 
-// ============================================
-// Base
-// ============================================
 @import "base/variables.less";
 @import "base/mixins.less";
 @import "base/base.less";
 
-
-// ============================================
-// Layout
-// ============================================
-@import "layout/layout.less";
+@import "layout/global.less";
 @import "layout/grid.less";
 @import "layout/clearfix.less";
-@import "layout/icon-fonts.less";
-@import "layout/typography.less";
-@import "layout/links.less";
 
+@import "ui/icon-fonts.less";
+@import "ui/typography.less";
+@import "ui/links.less";
+@import "ui/nav.less";
+@import "ui/header.less";
+@import "ui/main-content.less";
+@import "ui/article.less";
+@import "ui/buttons.less";
+@import "ui/forms.less";
+@import "ui/grid-filler.less";
+@import "ui/horizontal-rules.less";
+@import "ui/icons.less";
+@import "ui/labels.less";
+@import "ui/menus.less";
+@import "ui/swatches.less";
+@import "ui/tables.less";
 
-// ============================================
-// Components
-// ============================================
-@import "components/buttons.less";
-@import "components/forms.less";
-@import "components/horizontal-rules.less";
-@import "components/menus.less";
-@import "components/tables.less";
+@import "vendor/prismjs.less";
 
-
-// ============================================
-// Modules
-// ============================================
-@import "modules/header.less";
-@import "modules/footer.less";
-@import "modules/main-content.less";
-
-
-// ============================================
-// Plugins
-// ============================================
-@import "plugins/prismjs.less";
-
-
-// ============================================
-// Print
-// ============================================
 @import "layout/print.less";
-

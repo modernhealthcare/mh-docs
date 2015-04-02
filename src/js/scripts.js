@@ -1,9 +1,11 @@
 $(document).ready(function () {
 
   $('h1,h2,h3,h4,h5,h6').each(function() {
+    var $this = $(this);
     var link = '<span class="icon-link"></span>';
-    if ($(this).attr('id')) {
-      $(this).prepend(link);
+
+    if ($this.attr('id')) {
+      $this.prepend(link);
     }
   });
 
@@ -12,37 +14,48 @@ $(document).ready(function () {
       $('html,body').animate({
         scrollTop: 0
       }, 400);
+
       e.preventDefault();
     });
     $('a[href*="#"]:not([href="#"])').click(function(e) {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
         var target = $(this.hash);
+
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
         if (target.length) {
           $('html,body').animate({
-          scrollTop: target.offset().top
+            scrollTop: target.offset().top
           }, 400);
         }
       }
+
       e.preventDefault();
     });
   });
 
-  var offset = 300,
-  offsetOpacity = 1200,
-  scrollTopDuration = 700,
-  $toTop = $('.to-top');
+  var offset = 300;
+  var offsetOpacity = 1200;
+  var scrollTopDuration = 700;
+  var $toTop = $('.to-top');
 
   $(window).scroll(function() {
-    ( $(this).scrollTop() > offset ) ? $toTop.addClass('is-visible') : $toTop.removeClass('is-visible fade-out');
-    if ( $(this).scrollTop() > offsetOpacity ) {
+    var $this = $(this);
+
+    if ($this.scrollTop() > offset) {
+      $toTop.addClass('is-visible');
+    } else {
+      $toTop.removeClass('is-visible fade-out');
+    }
+
+    if ($this.scrollTop() > offsetOpacity) {
       $toTop.addClass('fade-out');
     }
   });
 
   var d = new Date();
   var n = d.getFullYear();
-  $('.current-yr').text(n);
-
+  var $copyright = $('[data-js="copyright"]');
+  $copyright.html('Copyright &copy; ' + n + ' <a href="http://www.modernhealthcare.com">Modern Healthcare</a>');
 
 });
