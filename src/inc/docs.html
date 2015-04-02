@@ -1,14 +1,16 @@
+<p><h1 class="title-xxl">Docs</h1>
+All of Modern Healthcare&#39;s documentation one place.</p>
 <h2 id="getting-started">Getting Started</h2>
-<p>You&#39;ll find some essential files in the root of <code>CHWeb</code> to get up and running with these tools:</p>
+<p>You&#39;ll find some essential files in the root of <code class="language-markup">CHWeb</code> to get up and running with these tools:</p>
 <ul>
-<li><code>package.json</code> installs dependencies for gulp.js</li>
-<li><code>gulpfile.js</code> configs the build system with tasks for compiling/minifying LESS and linting/compressing JS</li>
-<li><code>.editorconfig</code> to be used in conjunction with Sublime Text to keep codebase readable and consistent</li>
+<li><code class="language-markup">package.json</code> installs dependencies for gulp.js</li>
+<li><code class="language-markup">gulpfile.js</code> configs the build system with tasks for compiling/minifying LESS and linting/concatenating/compressing JS</li>
+<li><code class="language-markup">.editorconfig</code> to be used in conjunction with a text editor to keep codebase readable and consistent</li>
 </ul>
 <h3 id="installing-node-js">Installing node.js</h3>
-<p>Download node.js from the <a href="http://nodejs.org/">homepage</a> and follow their install instructions.  Once you have node.js installed, you can grab the build system (gulp.js) dependencies with <code>package.json</code>.</p>
+<p>Download node.js from the <a href="http://nodejs.org/">homepage</a> and follow their install instructions. Once you have node.js installed, you can grab the build system (gulp.js) dependencies with <code class="language-markup">package.json</code>.</p>
 <h3 id="package-json">package.json</h3>
-<p>In your terminal or command prompt, run the following command to install dependencies from <code>package.json</code>:</p>
+<p>In your terminal or command prompt, run the following command to install dependencies from <code class="language-markup">package.json</code>:</p>
 <pre>
 <code class="language-bash">
 &#36; npm install
@@ -22,72 +24,79 @@
 </code>
 </pre>
 
-<p>You&#39;ll notice in the root a new folder has been created called <code>node_modules</code>.  This contains all the gulp.js modules that will run tasks in our build system.</p>
+<p>You&#39;ll notice in the root a new folder has been created called <code class="language-markup">node_modules</code>. This contains all the gulp.js modules that will run tasks in our build system.</p>
 <h3 id="gulpfile-js">gulpfile.js</h3>
-<p>This configures all of our gulp tasks in the build system.  We will take a look at it&#39;s contents bit by bit to better understand how it works.</p>
+<p>This configures all of our gulp tasks in the build system. We will take a look at it&#39;s contents bit by bit to better understand how it works.</p>
 <h4 id="require">Require</h4>
 <p>This tells gulp what node modules it needs to work and stores them for use in a task.</p>
 <pre>
 <code class="language-javascript">
-var gulp = require('gulp'),
-  plumber = require('gulp-plumber'),
-  less = require('gulp-less'),
-  prefix = require('gulp-autoprefixer'),
-  rename = require('gulp-rename'),
-  minifyCSS = require('gulp-minify-css'),
-  size = require('gulp-size'),
-  jshint = require('gulp-jshint'),
-  uglify = require('gulp-uglify'),
-  watch = require('gulp-watch');
+var gulp = require('gulp');
+var plumber = require('gulp-plumber');
+var less = require('gulp-less');
+var prefix = require('gulp-autoprefixer');
+var rename = require('gulp-rename');
+var minifyCSS = require('gulp-minify-css');
+var size = require('gulp-size');
+var jshint = require('gulp-jshint');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
+var watch = require('gulp-watch');
 </code>
 </pre>
 
 <h4 id="styles">Styles</h4>
-<p>This is our <code>&#39;styles&#39;</code> task.  First, we tell gulp where to look for the scource files.  In the root of <code>CHWeb</code>, you can find the <code>src/</code> directory.  This contains the modular LESS components for styling the site.  The reason we have stylesheets broken out into sepearte sources in so that we only pull in what is neccessary in the browser.  This task checks for LESS compiling errors, has an autoprefixer and distributes both an expanded and a minified version of the source files.  The site uses the minified versions, so make sure to upload those.
-This task can be ran on its own: <code>&amp;#36; gulp styles</code></p>
+<p>This is our <code class="language-markup">&#39;styles&#39;</code> task. First, we tell gulp where to look for the scource files. In the root of <code class="language-markup">CHWeb</code>, you can find the <code class="language-markup">./src</code> directory. This contains the modular LESS components for styling the site. This task checks for LESS compiling errors, has an autoprefixer and distributes both an expanded and a minified version of the source files. The site uses the minified versions, so make sure to deploy those.</p>
+<p>Task commad:  <code class="language-markup">$ gulp styles</code></p>
 <pre>
 <code class="language-javascript">
 gulp.task('styles', function() {
-  gulp.src([
-    './src/less/styles.less',
-    './src/less/ie-styles.less',
-    './src/less/grids-responsive.less',
-    './src/less/grids-responsive-old-ie.less',
-    './src/less/meter.less',
-    './src/less/clickshare.less'
-  ])
-  .pipe(plumber())
-  .pipe(less())
-  .pipe(prefix('last 8 versions', "Explorer 7"))
-  .pipe(gulp.dest('./css'))
-  .pipe(minifyCSS())
-  .pipe(rename({ suffix: '.min' }))
-  .pipe(size({ showFiles: true, title: 'styles' }))
-  .pipe(gulp.dest('./css'));
+ gulp.src([
+  './src/less/styles.less',
+  './src/less/ie-styles.less',
+  './src/less/grids-responsive.less',
+  './src/less/grids-responsive-old-ie.less',
+  './src/less/meter.less',
+  './src/less/clickshare.less'
+ ])
+ .pipe(plumber())
+ .pipe(less())
+ .pipe(prefix('last 8 versions', "Explorer 7"))
+ .pipe(gulp.dest('./css'))
+ .pipe(minifyCSS())
+ .pipe(rename({ suffix: '.min' }))
+ .pipe(size({ showFiles: true, title: 'styles' }))
+ .pipe(gulp.dest('./css'));
 });
 </code>
 </pre>
 
 <h4 id="lint-scripts">Lint &amp; Scripts</h4>
-<p>The <code>&#39;lint&#39;</code> task uses JShint to check for errors and proper syntax.  Errors are by default reported in your terminal or command prompt window.
-This task can be ran on its own: <code>&amp;#36; gulp lint</code></p>
+<p>The <code class="language-markup">&#39;lint&#39;</code> task uses JShint to check for errors and proper syntax. Errors are by default reported in your terminal or command prompt window.</p>
+<p>Task commad:  <code class="language-markup">$ gulp lint</code></p>
 <pre>
 <code class="language-javascript">
 gulp.task('lint', function() {
-  gulp.src('./src/js/scripts.js')
-  .pipe(jshint())
-  .pipe(jshint.reporter('default'));
+ gulp.src('./src/js/scripts.js')
+ .pipe(jshint())
+ .pipe(jshint.reporter('default'));
 });
 </code>
 </pre>
 
-<p>The <code>&#39;scripts&#39;</code> task runs on our main scripts file, found in <code>src/js/scripts.js</code>.  First, we lint the script for errors, then we minify and distribute to our <code>js/</code> folder as a minified version -- this should be shipped to production.
-This task can be ran on its own: <code>&amp;#36; gulp scripts</code></p>
+<p>The <code class="language-markup">&#39;scripts&#39;</code> task runs on our JS files, found in <code class="language-markup">./src/js</code>. First, we lint the script for errors, then concatenate into a single file, then compress and distribute to our <code class="language-markup">js</code> folder -- this should be shipped to production.</p>
+<p>Task commad:  <code class="language-markup">$ gulp scripts</code></p>
 <pre>
 <code class="language-javascript">
 gulp.task('scripts', ['lint'], function() {
-  gulp.src('./src/js/scripts.js')
+  gulp.src([
+    './src/js/polyfills/*.js',
+    './src/js/cci/*.js',
+    './src/js/plugins/*.js',
+    './src/js/app/*.js'
+  ])
   .pipe(plumber())
+  .pipe(concat('scripts.js'))
   .pipe(uglify())
   .pipe(rename({ suffix: '.min' }))
   .pipe(size({ showFiles: true, title: 'scripts' }))
@@ -97,19 +106,21 @@ gulp.task('scripts', ['lint'], function() {
 </pre>
 
 <h4 id="watch">Watch</h4>
-<p>The <code>&#39;watch&#39;</code> task will check to see if there are changes being made to our <code>src</code> files when working on them.
-This task can be ran on its own: <code>&amp;#36; gulp watch</code></p>
+<p>The <code class="language-markup">&#39;watch&#39;</code> task will check to see if there are changes being made to our <code class="language-markup">./src</code> files when in development.</p>
+<p>Task commad:  <code class="language-markup">$ gulp watch</code></p>
 <pre>
 <code class="language-javascript">
 gulp.task('watch', function() {
-  gulp.watch('./src/less/**/*.less', ['styles']);
-  gulp.watch('./src/js/scripts.js', ['scripts']);
+ gulp.watch('./src/less/**/*.less', ['styles']);
+ gulp.watch('./src/js/scripts.js', ['scripts']);
 });
 </code>
 </pre>
 
 <h4 id="default">Default</h4>
-<p>We define the <code>&#39;default&#39;</code> gulp task by telling it to run all of our predefined tasks <code>[&#39;styles&#39;, &#39;scripts&#39;, &#39;watch&#39;]</code>.  When running this task, gulp will compile/minify all LESS and JS, then watch those same files for changes, so that when working on <code>src/</code> files, any changed/saved file will be piped through the build system and distributed to their defined destinations.  You will also notice that the size of these files will print out in your terminal or command prompt window.<br>It is recommended that you run the <code>&#39;default&#39;</code> gulp task when working on source files:  <code>&amp;#36; gulp</code></p>
+<p>We define the <code class="language-markup">&#39;default&#39;</code> gulp task by telling it to run all of our predefined tasks <code class="language-markup">[&#39;styles&#39;, &#39;scripts&#39;, &#39;watch&#39;]</code>. When running this task, gulp will compile/concat/minify/compress all LESS and JS and continue to watch those same source files for change.  When working on <code class="language-markup">./src</code> files, any changed/saved file will be piped through the build system and distributed to their defined destinations. You will also notice that the size of these files will print out in your terminal or command prompt window. 
+It is recommended that you run the <code class="language-markup">&#39;default&#39;</code> gulp task when in development.</p>
+<p>Task command: <code class="language-markup">$ gulp</code></p>
 <pre>
 <code class="language-javascript">
 gulp.task('default', ['styles', 'scripts', 'watch']);
