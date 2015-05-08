@@ -1,5 +1,13 @@
 ## Newscycle
 
+### Newslists
+
+<pre>
+<code class="language-markup"> 
+&lt;pbs:newslist objectclass="101" useobjects="1">
+</code>
+</pre>
+
 ### Caching
 
 
