@@ -1,9 +1,9 @@
 $(document).ready(function () {
 
   var $doc = $('html, body');
+  var $toggle = $('[data-js="nav-toggle"]');
 
   $(function() {
-    var $toggle = $('[data-js="nav-toggle"]');
     var $nav = $('[data-js="nav-sidebar"]');
 
     $toggle.click(function(e) {
@@ -18,6 +18,8 @@ $(document).ready(function () {
         $this.removeClass('active');
         $nav.fadeOut(350);
       }
+
+      e.preventDefault();
     });
 
     $(window).resize(function() {
@@ -29,7 +31,6 @@ $(document).ready(function () {
   });
 
   $(function() {
-    var $toggle = $('[data-js="nav-toggle"]');
     var $nav = $('[data-js="nav-sidebar"]');
     var $navLink = $('[data-js="sub-nav"] a');
 
