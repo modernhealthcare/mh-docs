@@ -3,56 +3,70 @@
 //------------------------------------//
 
 .masthead {
-  background-color: @cool-grey;
+  background-color: lighten(@cool-grey, 65%);
+  padding: 0 16px;
 }
 
 .header {
   position: relative;
   width:  100%;
   height: auto;
+  overflow: hidden;
+}
+
+.nav-toggle {
+  position: fixed;
+  .rem(top, 36);
+  .rem(right, 16);
+  display: block;
+  cursor: pointer;
   background-color: lighten(@cool-grey, 65%);
-  overflow: auto;
-  box-shadow: inset 0 2px 3px @shadow;
+  padding: 22px 24px 26px;
+  border-radius: 4px;
+  transform: translateY(-50%);
+  z-index: 9999;
   @media @md {
-    position: fixed;
-    width: 25%;
-    height: 100%;
+    display: none;
   }
-}
-
-.header-logo {
-  @media @lg {
-    .rem(padding-right, 16);
-  }
-}
-
-.logo {
-  margin: 0 auto;
-  .rem(padding, 4);
-  @media @md { padding: 0; }
-  a {
+  span,
+  span:before,
+  span:after {
+    content: "";
+    cursor: pointer;
+    border-radius: 1px;
+    height: 6px;
+    width: 36px;
+    background: @cool-grey;
+    position: absolute;
+    left: 50%;
     display: block;
-    img {
-      .rem(max-width, 250);
-      width: 100%;
-      height: auto;
-    }
+    transform: translateX(-50%);
+    .transition(0.35s; all; ease-in-out);
+  }
+  span:before {
+    top: -12px;
+  }
+  span:after {
+    bottom: -12px;
   }
 }
 
-.tagline {
-  clear: both;
-  color: @white;
-  font-family: @secondary-font;
-  font-style: italic;
-  text-shadow: 2px 2px 3px @shadow;
-  .padding(8, 0, 8, 0);
-  margin: 0;
-  @media @md {
-    .rem(font-size, 12);
+.nav-toggle.active {
+  background-color: darken(@cool-grey, 10%);
+  span {
+    background-color: transparent;
+    transform: translateX(-50%);
   }
-  @media @lg {
-    display: block;
-    .rem(font-size, 16);
+  span:before,
+  span:after {
+    top: 0;
+  }
+  span:before {
+    background-color: @white;
+    transform: translateX(-50%) rotate(45deg);
+  }
+  span:after {
+    background-color: @white;
+    transform: translateX(-50%) rotate(-45deg);
   }
 }

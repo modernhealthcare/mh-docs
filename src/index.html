@@ -33,46 +33,62 @@
   <header class="header">
     <div class="pure-g">
       <div class="pure-u-1">
-        <div class="u-pad masthead">
-          <div class="header-logo">
-            <h1 class="logo"><a href="#"><img src="http://www.modernhealthcare.com/images/mh-logo-dropshadow.png" alt="Modern Healthcare"></a></h1>
-            <span class="tagline">The leader in healthcare business news, research & data</span>
-          </div>
+        <div class="masthead">
+          <ul class="main-nav">
+            <li class="logo"><a href="http://modernhealthcare.github.io"><img class="pure-img" src="https://raw.githubusercontent.com/modernhealthcare/mh-logo/master/mh-logo-cool-grey.png" alt="Modern Healthcare"></a></li>
+            <li class="current"><a href="http://modernhealthcare.github.io/mh-docs/dist">Docs</a></li>
+            <li><a href="http://modernhealthcare.github.io/mh-patterns/dist">Patterns</a></li>
+            <li><a href="http://modernhealthcare.github.io/mh-javascript/dist">Javascript</a></li>
+            <li><a href="http://modernhealthcare.github.io/mh-performance/dist">Performance</a></li>
+          </ul>
+          <a class="nav-toggle" data-js="nav-toggle" href="#"><span></span></a>
         </div>
-        <nav class="nav-sidebar">
-          <ul class="nav-list">
+      </div>
+    </div>
+  </header>
+  <nav class="u-pad nav-sidebar" data-js="nav-sidebar">
+    <div class="pure-g">
+      <div class="pure-u-1">
+        <ul class="sub-nav" data-js="sub-nav">
+            <li><a href="#docs"><span>About</span></a></li>
             <li><a href="#getting-started"><span>Getting Started</span></a></li>
             <li><a href="#newscycle"><span>Newscycle</span></a></li>
             <li><a href="#resources"><span>Resources</span></a></li>
             <li><a href="#further-reading"><span>Further Reading</span></a></li>
           </ul>
-        </nav>
       </div>
     </div>
-  </header>
-  <div class="main">
+  </nav>
+  <main class="main" data-js="main">
     <div class="pure-g">
       <div class="pure-u-1">
         <div class="u-pad">
-          <a href="/">&laquo; Back to table of contents</a>
+          <section data-js="#docs">
           @@include('./inc/docs.html')
+          </section>
+          <section data-js="#getting-started">
+          @@include('./inc/getting-started.html')
+          </section>
+          <section data-js="#newscycle">
           @@include('./inc/newscycle.html')
+          </section>
+          <section data-js="#resources">
           @@include('./inc/resources.html')
+          </section>
+          <section data-js="#further-reading">
           @@include('./inc/further-reading.html')
-          <br><br>
-          <a href="/">&laquo; Back to table of contents</a>
+          </section>
           <br><br>
           <span data-js="copyright"></span>
           <br><br>
         </div>
       </div>
     </div>
-  </div>
-  <a class="to-top" href="#"><span class="icon-arrow-up6"></span></a>
+  </main>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.0.6/jquery.browser.min.js"></script>
-  <script src="http://www.modernhealthcare.com/js/plugins/modernizr.custom.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-browser/0.0.6/jquery.browser.min.js"></script>
   <script src="js/scripts.min.js"></script>
 </body>
 </html>
