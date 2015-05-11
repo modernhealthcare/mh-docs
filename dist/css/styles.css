@@ -1813,6 +1813,26 @@ ol > li {
 p > code {
   white-space: normal !important;
 }
+.factbox {
+  background-color: #faf2d2;
+  line-height: 1.35;
+  margin: 1em 0;
+}
+@media screen and ( min-width: 48em ) {
+  .factbox {
+    max-width: 50%;
+  }
+}
+.factbox-inner {
+  padding: 1em;
+}
+.factbox-label {
+  color: #636363;
+  text-transform: uppercase;
+}
+.factbox-headline {
+  margin: 1em 0 .5em;
+}
 a {
   color: #982329;
   text-decoration: none;
@@ -2295,9 +2315,9 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form input[readonly],
 .pure-form select[readonly],
 .pure-form textarea[readonly] {
-  background: #585555;
+  background: #636363;
   /* menu hover bg color */
-  color: #585555;
+  color: #636363;
   /* menu text color */
   border-color: #cccccc;
 }
@@ -2577,7 +2597,7 @@ hr {
   border-bottom: 0 none;
 }
 .icons > li > span {
-  color: #585555;
+  color: #636363;
   height: 96px;
   height: 6rem;
   font-size: 32px;
@@ -2594,7 +2614,7 @@ hr {
   color: #424b55;
 }
 .-label-lg {
-  color: #585555;
+  color: #636363;
   text-transform: uppercase;
 }
 .-label-sm {
@@ -2749,7 +2769,7 @@ hr {
 }
 .pure-menu a,
 .pure-menu .pure-menu-can-have-children > li:after {
-  color: #585555;
+  color: #636363;
 }
 .pure-menu .pure-menu-can-have-children > li:hover:after {
   color: #ffffff;
@@ -2761,7 +2781,7 @@ hr {
 .pure-menu li a:hover,
 .pure-menu li a:focus {
   color: #ffffff;
-  background: #585555;
+  background: #636363;
 }
 /* DISABLED STATES */
 .pure-menu li.pure-menu-disabled a:hover,
@@ -2780,7 +2800,7 @@ hr {
 }
 /* HEADINGS */
 .pure-menu .pure-menu-heading {
-  color: #585555;
+  color: #636363;
   text-transform: uppercase;
   font-size: 90%;
   margin-top: 0.5em;
