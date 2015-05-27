@@ -1926,6 +1926,7 @@ a:active {
     text-align: right;
     background-color: #ffffff;
     opacity: 1;
+    visibility: visible;
     -webkit-transition: none;
     transition: none;
   }
